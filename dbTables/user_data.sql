@@ -1,0 +1,9 @@
+﻿CREATE TABLE USER_DATA(
+   ID  SERIAL PRIMARY KEY,
+   FIRST_NAME TEXT NOT NULL,
+   LAST_NAME TEXT NOT NULL,
+   PASSWORD TEXT NOT NULL,
+   EMAIL TEXT NOT NULL,
+   CREATED_ON timestamp without time zone default (now() at time zone 'ADT')
+);
+

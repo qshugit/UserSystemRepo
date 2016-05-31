@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css">	
+			body {
+				background-image: url("background.jpg");
+				background-repeat:no-repeat;
+				background-size:cover;
+			}
+		
+			.container {
+				position: relative;
+				display: inline-block;
+				margin-top: 10%;
+				text-align: center;
+				width: 100%;
+				clear: both;
+			}
+			
+			.overrideContainer {
+				position: relative;
+				display: inline-block;
+				text-align: center;
+				margin-top: 2%;
+				width: 25%;
+			}
+			.overrideContainer input {
+				width: 25%;
+				margin-top: 1%;
+				text-align:center;
+			}
+		</style>
+		<title>Password Reset</title>
+	</head>
+	<body>
+		<div align="right">
+			 <a style="margin-right: 1%; font-size: 20px" href="http://localhost:3000/api/login">login</a>
+			 <a style="margin-right: 2%; font-size: 20px" href="http://localhost:3000/reset">Reset Password</a>
+		</div>
+	
+		<div class="container">
+			<p style="font-size: 42px"><strong>Please reset your password here.</strong></p>	
+			<form id="reset_form" action="/api/reset" method="POST">
+				<table align="center" style="border-collapse:separate; border-spacing:1.5em;">
+					<tr><td>Old Password:</td><td><input type="password" name="old_password" value=""></td></tr></br>
+					<tr><td>New Password:</td><td><input type="password" name="new_password" value=""></td></tr>
+					<tr><td>Re-enter New Password:</td><td><input type="password" name="re_new_password" value=""></td></tr>
+				</table>
+
+				<div class="overrideContainer">
+					<input type="submit" value="Submit">
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

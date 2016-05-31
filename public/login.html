@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+
+<!-- 
+This file is not required for now, the hapi basic authentication
+provides a window for input to authenticate.
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login here!</title>
+	</head>
+	<body>
+		<h2>Welcome to the Login page.</h2>
+	
+		<form id="login_form" action="/api/login" method="POST">
+			Email: <input type="text" name="email" value=""><br><br>
+			Password: <input type="password" name="password" value=""><br><br>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>
